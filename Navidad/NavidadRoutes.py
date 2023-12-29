@@ -1,7 +1,10 @@
 from fastapi import APIRouter
 import re
 from Navidad import NavidadFunctions as NF
-router = APIRouter()
+router = APIRouter(
+    prefix="/Navidad",
+    tags=["navidad"]
+)
 
 @router.get('/{numero}/')
 def checkNumber(numero:str):
